@@ -17,14 +17,8 @@
 **RSTabBar** is available through [Swift Package Manager](https://github.com/apple/swift-package-manager)
 
 ### Swift Package Manager
-- In Xcode select: 
-  ```
-  File > Swift Packages > Add Package Dependency...
-  ```
-- Then paste this URL: 
-  ```
-  https://github.com/rursache/RSTabBar
-  ```
+Xcode > File > Swift Packages > Add Package Dependency > https://github.com/rursache/RSTabBar
+
 ## Usage
 
 The following view will have 2 custom tabs, each with their `Text` view:
@@ -34,29 +28,29 @@ import SwiftUI
 import RSTabBar
 
 struct DemoView: View {
-	static let tabs = [
-		TabItem(index: 0, title: "Home", icon: "house"),
-		TabItem(index: 1, title: "More", icon: "bolt.car")
-	]
-	
-	@State var tabBarVisible: Bool = true
-	@State var tabs = DemoView.tabs
-	@State var selectedTab: TabItem = DemoView.tabs.first!
-	
-	var body: some View {
-		AdvancedTabBar(tabs: $tabs, selectedTab: $selectedTab, tabBarVisible: $tabBarVisible) {
-		
-			Text("First view")
-				.font(.title).bold()
-				.padding()
-				.tag(self.tabs[1])
-				
-			Text("First view")
-				.font(.title).bold()
-				.padding()
-				.tag(self.tabs[2])
-		}
-	}
+    static let tabs = [
+        TabItem(index: 0, title: "Home", icon: "house"),
+        TabItem(index: 1, title: "More", icon: "bolt.car")
+    ]
+    
+    @State var tabBarVisible: Bool = true
+    @State var tabs = DemoView.tabs
+    @State var selectedTab: TabItem = DemoView.tabs.first!
+    
+    var body: some View {
+        AdvancedTabBar(tabs: $tabs, selectedTab: $selectedTab, tabBarVisible: $tabBarVisible) {
+        
+            Text("First view")
+                .font(.title).bold()
+                .padding()
+                .tag(self.tabs[1])
+                
+            Text("First view")
+                .font(.title).bold()
+                .padding()
+                .tag(self.tabs[2])
+        }
+    }
 }
 
 ```
