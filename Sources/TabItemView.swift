@@ -37,7 +37,7 @@ public struct TabItemView: View {
 
 				Spacer()
 			}
-			.frame(height: 60)
+			.frame(height: 58)
 		}
 		.frame(width: 45)
 	}

@@ -33,9 +33,7 @@ public struct RSTabBar<Content: View>: View {
 		let tabAppearance = UITabBarAppearance()
 		tabAppearance.configureWithTransparentBackground()
 		UITabBar.appearance().standardAppearance = tabAppearance
-		if #available(iOS 15.0, *) {
-			UITabBar.appearance().scrollEdgeAppearance = tabAppearance
-		}
+		UITabBar.appearance().scrollEdgeAppearance = tabAppearance
 	}
 	
 	public var body: some View {
@@ -65,10 +63,16 @@ public struct RSTabBar<Content: View>: View {
 							Spacer()
 						}
 					}
-					.clipped()
+					.background(tabBarBackgroundColor ?? (colorScheme == .dark ? .black : .white))
 				}
 			}
-			.background(tabBarBackgroundColor ?? (colorScheme == .dark ? .black : .white))
+			
+		}.safeAreaInset(edge: .bottom) {
+			if tabBarVisible {
+				HStack(alignment: .center, spacing: 0) {
+					Spacer(minLength: 0).frame(maxWidth: .infinity)
+				}.background(tabBarBackgroundColor ?? (colorScheme == .dark ? .black : .white))
+			}
 		}
 	}
 }

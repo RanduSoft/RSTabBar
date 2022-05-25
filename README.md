@@ -10,7 +10,7 @@
 ## Requirements
 
 - SwiftUI
-- iOS 13.0 or newer
+- iOS 15.0 or newer
 
 ## Installation
 
@@ -70,8 +70,7 @@ Check out the more advanced [example](https://github.com/rursache/RSTabBar/blob/
 - Hopefully will fix some of the issues below
 
 ## Known issues
-- Depending on the child `View`s, sometimes there is a transparent gap between the bottom of the `RSTabBar` and the bottom of the screen on iPhones with notches. This can be fixed by adding `.padding(.bottom, showTabBar ? 10 : 0)` in the top View of the child. This is not ideal and I'll try to fix it.
-- The safe area of the OG transparent `TabBar` are there and this is on purpose. However there are cases where you don't want that padding. Again, something like `.padding(.bottom, -40)` will adjust or remove that padding. I'm not sure what I can do about this.
+- The safe area of the OG transparent `TabBar` are there and this is on purpose. However there are cases where you don't want that padding. Something like `.padding(.bottom, -40)` will adjust or remove that padding. I'm not sure what I can do about this.
 
 ## Contribution
 

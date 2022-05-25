@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "RSTabBar",
-	platforms: [.iOS(.v13)],
+	platforms: [.iOS(.v15)],
     products: [
         .library(
             name: "RSTabBar",

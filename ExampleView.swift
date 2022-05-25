@@ -37,12 +37,10 @@ struct ExampleView: View {
 						.font(.title).bold()
 						.padding()
 					Button("\(tabBarVisible ? "Hide" : "Show") tab bar") {
-						withAnimation(.interactiveSpring()) {
-							self.tabBarVisible.toggle()
-						}
+						tabBarVisible.toggle()
 					}
 					Button("Switch to random tab") {
-						self.selectedTab = self.tabs.randomElement()!
+						selectedTab = self.tabs.randomElement()!
 					}
 					Spacer()
 				}
@@ -82,7 +80,7 @@ struct ListViewDemo: View {
 						.navigationTitle("2nd View")
 						.navigationBarTitleDisplayMode(.inline)
 						.onAppear {
-							self.tabBarVisible = false
+							tabBarVisible = false
 						}
 					} label: {
 						Text("\(number)")
@@ -90,9 +88,19 @@ struct ListViewDemo: View {
 				}
 			}
 			.onAppear {
-				self.tabBarVisible = true
+				tabBarVisible = true
 			}
 			.navigationTitle("Large Title Here")
 		}
+	}
+}
+
+struct ExampleView_Previews: PreviewProvider {
+	static var previews: some View {
+		ExampleView()
+			.previewDevice("iPhone 8")
+		
+		ExampleView()
+			.previewDevice("iPhone 12")
 	}
 }
