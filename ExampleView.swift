@@ -95,12 +95,12 @@ struct ListViewDemo: View {
 	}
 }
 
-struct ExampleView_Previews: PreviewProvider {
-	static var previews: some View {
-		ExampleView()
-			.previewDevice("iPhone 8")
-		
-		ExampleView()
-			.previewDevice("iPhone 12")
-	}
-}
+//struct ExampleView_Previews: PreviewProvider {
+//	static var previews: some View {
+//		ExampleView()
+//			.previewDevice("iPhone 8")
+//		
+//		ExampleView()
+//			.previewDevice("iPhone 12")
+//	}
+//}

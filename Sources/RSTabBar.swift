@@ -73,5 +73,6 @@ public struct RSTabBar<Content: View>: View {
 				}.background(tabBarBackgroundColor ?? (colorScheme == .dark ? .black : .white))
 			}
 		}
+		.ignoresSafeArea(.keyboard, edges: .all)
 	}
 }
