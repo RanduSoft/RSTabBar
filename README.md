@@ -45,7 +45,7 @@ struct DemoView: View {
                 .padding()
                 .tag(self.tabs[1])
                 
-            Text("First view")
+            Text("Second view")
                 .font(.title).bold()
                 .padding()
                 .tag(self.tabs[2])
@@ -55,13 +55,9 @@ struct DemoView: View {
 
 ```
 
-Hiding the tabbar is easy, just `tabBarVisible = false` anywhere
+Hiding the tabbar is easy! Just `tabBarVisible = false` anywhere
 
 Check out the more advanced [example](https://github.com/rursache/RSTabBar/blob/master/ExampleView.swift) to understand how to further customize `RSTabBar`
-
-## Roadmap
-- Support for any `Image` in `TabItem` instead of just `SFSymbols`
-- Hopefully will fix some of the issues below
 
 ## Known issues
 - The safe area of the OG transparent `TabBar` are there and this is on purpose. However there are cases where you don't want that padding. Something like `.padding(.bottom, -40)` will adjust or remove that padding. I'm not sure what I can do about this.
@@ -73,7 +69,7 @@ Pull requests are also appreciated as I still learn SwiftUI.
 
 ## License
 
-**RSTabBar** is under the terms and conditions of the [MIT license]().
+**RSTabBar** is under the terms and conditions of the [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
 ```
 MIT License
