@@ -4,8 +4,8 @@
 ![](https://img.shields.io/badge/iOS-13.0%2B-blue)
 ![](https://img.shields.io/badge/Swift-5-orange?logo=Swift&logoColor=white)
 
-`SwiftUI` standard `TabView` component lacks basic functions from `UIKit` like hiding the `TabBar` in specific screens.
-`RSTabBar` aims to fix that while keeping the default look and feel of the `TabBar`
+`SwiftUI`'s standard `TabView` component lacks basic functionality from `UIKit` like hiding the `TabBar` in specific screens.
+`RSTabBar` aims to fix that while keeping the default look and feel of the OG `TabBar`
 
 ## Requirements
 
@@ -16,7 +16,6 @@
 
 **RSTabBar** is available through [Swift Package Manager](https://github.com/apple/swift-package-manager)
 
-### Swift Package Manager
 Xcode > File > Swift Packages > Add Package Dependency > https://github.com/rursache/RSTabBar
 
 ## Usage
