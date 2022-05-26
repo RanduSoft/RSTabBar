@@ -29,7 +29,7 @@ import RSTabBar
 
 struct DemoView: View {
     static let tabs = [
-        TabItem(index: 0, title: "Home", icon: "house"),
+        TabItem(index: 0, title: "Home", icon: "house", iconSelected: "house.fill"),
         TabItem(index: 1, title: "More", icon: "bolt.car")
     ]
     
@@ -38,7 +38,7 @@ struct DemoView: View {
     @State var selectedTab: TabItem = DemoView.tabs.first!
     
     var body: some View {
-        AdvancedTabBar(tabs: $tabs, selectedTab: $selectedTab, tabBarVisible: $tabBarVisible) {
+        RSTabBar(tabs: $tabs, selectedTab: $selectedTab, tabBarVisible: $tabBarVisible) {
         
             Text("First view")
                 .font(.title).bold()

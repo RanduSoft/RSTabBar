@@ -4,7 +4,6 @@
 //  Created by Radu Ursache
 //
 
-import Foundation
 import UIKit
 
 public struct TabItem: Codable, Equatable, Hashable {

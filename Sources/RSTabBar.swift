@@ -66,7 +66,6 @@ public struct RSTabBar<Content: View>: View {
 					.background(tabBarBackgroundColor ?? (colorScheme == .dark ? .black : .white))
 				}
 			}
-			
 		}.safeAreaInset(edge: .bottom) {
 			if tabBarVisible {
 				HStack(alignment: .center, spacing: 0) {

@@ -10,7 +10,7 @@ import RSTabBar
 struct ExampleView: View {
 	
 	static let tabs = [
-		TabItem(index: 0, title: "Home", icon: "house"),
+		TabItem(index: 0, title: "Home", icon: "house", iconSelected: "house.fill"),
 		TabItem(index: 1, title: "Items", icon: "list.dash"),
 		TabItem(index: 2, title: "More", icon: "bolt.car")
 	]
