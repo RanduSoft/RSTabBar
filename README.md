@@ -42,12 +42,12 @@ struct DemoView: View {
             Text("First view")
                 .font(.title).bold()
                 .padding()
-                .tag(self.tabs[1])
+                .tag(self.tabs[0])
                 
             Text("Second view")
                 .font(.title).bold()
                 .padding()
-                .tag(self.tabs[2])
+                .tag(self.tabs[1])
         }
     }
 }
